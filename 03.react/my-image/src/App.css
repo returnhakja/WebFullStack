@@ -1,0 +1,61 @@
+.container {
+  /* 중앙정렬하면 flex가 높이와 넓이가 있어야함 */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.add-btn {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  border: 2px solid palevioletred;
+  background-color: palevioletred;
+  color: white;
+  box-sizing: border-box;
+  border-radius: 42%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 24px;
+  cursor: pointer;
+}
+.file-upload-input {
+  display: none;
+}
+
+.main-text {
+  text-align: center;
+}
+.gallery {
+  width: 540px;
+  height: 600px;
+  overflow: auto;
+  border: 2px dashed red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.img-item {
+  line-break: auto;
+  display: block;
+  width: 200px;
+  height: 200px;
+  min-width: 150px;
+  max-width: 150px;
+  margin: 10px;
+}
+.img-item img {
+  width: 200px;
+  height: 200px;
+  min-width: 150px;
+  max-width: 150px;
+  border: 3px dashed red;
+}

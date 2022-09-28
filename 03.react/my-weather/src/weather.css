@@ -1,0 +1,28 @@
+.cont {
+  /* width: 500px;
+  height: 500px; */
+  text-align: center;
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+}
+.title {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.weather {
+  color: red;
+}
+
+.wea {
+  color: brown;
+}
+
+.wind {
+  color: tomato;
+}
+
+.sunset {
+  color: salmon;
+}
