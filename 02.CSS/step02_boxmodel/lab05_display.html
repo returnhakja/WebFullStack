@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        span{
+            width: 100px;
+            height: 100px;
+            background: gold;
+            display: block;
+        }
+        input{
+            width: 100px;
+            height: 50px;
+            background: red;
+            margin: 50px 0;
+            display: inline-block;
+        }
+        input:nth-child(3){ /*1을 줄땐 아무변화 x 하지만 2주면 1이 사라짐 3주면 2가 사라짐*/
+            /* display: none; 없는거처럼 여겨진다 */
+            opacity: 0; /*투명도*/
+        }
+    </style>
+</head>
+<body>
+    <!-- dispaly : 요소의 박스타입  -->
+    <!-- block,inline(margin, padding에  top과 bottom 사용을 할 수 없다) -->
+    <!-- inline-block -->
+    <!-- none 존재하지않은것처럼 감춤 -->
+    <span></span>
+    <input type="text" value="1"> 
+    <input type="text" value="2">
+    <input type="text" value="3">
+</body>
+</html>

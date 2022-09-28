@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        article .pic{
+            /*사진이미지가 들어감*/
+            width: 100px;
+            height: 100px;
+            background: darkblue;
+            margin: 10px;
+            float: left;
+        }
+        .p2 {
+            clear:both;
+        }
+
+        /*가로정렬*/
+        .box{
+            width: 100px;
+            height: 100px;
+            background: gold;
+            margin: 10px;
+            border: 3px solid red;
+            float: left;
+        }
+        .box4{  /*box class가 float로 떠있는 상태이기 때문에 float를 주지 않았을때 뒤로 들어감*/
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+            background: red;
+            clear: left; /*떠있는 박스를 정렬시켜줌 */
+        }
+        /*float 해제 방법*/
+        /* 1. 형제 요소에 clear : left, right . both 적용 시킬 수 있음 */
+        /* 문제발생 */
+        /* 박스 1 2 3 다음 박스4라는 또 다른 형제요소가 존재했기 때문에 이 요소에 clear 적용을 해서 사용할 수 있었으 */
+        /* 근데 형제요소가 오지 않은 상태에서 새롭게 정렬하고자 할때는 clear적용 할 대상이 없음 */
+        /* 어케 해결? */
+        /* 만약 해제 대상 형제요소가 없다면 ?? */
+        /* 2. 부모요소에 overflow : hidden, auto 넘치는 것에 대한것은 사라지게 만든다 */
+        /*2. 부모 요소 해제*/
+        /*  overflow는 정렬과 관계없는 propety이므로 적절치 않음 */
+        .parent {
+            overflow: hidden;
+        }
+        /* 3. clearfix만들어 해결 */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+        span{
+            width: 100px;
+            height: 100px;
+            background: violet;
+            margin: 10px;
+            float: left; /*인라인요소이지만 float를 주면 block형태가 된다 */
+        }
+    </style>
+</head>
+<body>
+    <!-- float : 요소를 좌우 방향으로 정렬(띄움) -->
+    <!-- none, left, right -->
+    <article>
+        <div class="pic"></div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic exercitationem sunt, quam provident deserunt fuga aperiam at rerum. Porro sed itaque excepturi tempore corrupti dolores ratione minima laudantium perferendis eveniet?
+        <div class="p2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro ullam ex harum minus ab fugiat temporibus, veniam quis iure perspiciatis id eveniet pariatur omnis accusantium quos reprehenderit eius voluptate quae?</div>
+    </article>
+
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box4"></div>
+
+    <!-- 부모요소에 overflow -->
+
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    <!-- overflow는 정렬과 관계없는 propety이므로 적절치 않음 -->
+    <!-- 3. 부모요소에 clearfix 클래스를 추가 -->
+    <div class="clearfix">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <div class="box4"></div>
+    <hr>
+    <!-- float의 경우 inline-, table- 요소를 block으로 변경하는 부분이 내포 -->
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaCATQxeK4iyIBZgc3mBI_Vd0_TlBW9xcMHw&usqp=CAU">
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            display: flex;
+            font-size: 0; 
+
+        }
+        /* 시나리오 1
+        .container .item{
+            width: 100px;
+            height: 100px;
+            border: 2px solid blue;
+            display: inline-block;
+            font-size: 16px;
+        } */
+        /* 시나리오2 */
+        /* .container .item{
+            width: 100px;
+            height: 100px;
+            border: 2px solid;
+            float: left;
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        } */
+        /* 시나리오3 */
+         /* .container .item{
+            width: 100px;
+            height: 100px;
+            border: 2px solid;
+        }
+        .container {
+            display: flex;
+            display: inline-flex;
+        }  */
+
+        /*main/ cross*/
+        /*flex-direction : row*/
+
+        /*flex-wrap*/
+        /* .container .item{
+            width: 100px;
+            height: 100px;
+            border: 2px solid blue;
+            font-size: 16px;
+        } */
+        /* .container{
+            justify-content: center; 요소가 가운데로 이동
+            justify-content: end; 오른쪽
+            justify-content: left; 왼쪽
+        } */
+        /*05. align-content*/
+        /* .container{
+            height: 400px;
+            align-content: center;
+
+        } */
+
+        /*align-item*/
+        .container{
+            height: 400px;
+            align-items:center;
+            justify-content: center;
+            
+        }
+        /* .item:nth-child(3){
+            font-size: 50px;
+        } */
+        .item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* order */
+        .order2 {
+            order : 3;
+        }
+        .order3 {
+            order : 2;
+        }
+        /*8. flex-grow*/
+        .item1{
+             flex-grow: 1;  
+            /* flex-shrink: 0;
+            width: 100px; */
+        
+        }
+        .item2{
+              flex-grow: 2;  
+             /* flex-shrink: 1; */
+             
+        }
+
+
+        /*10.flex */
+        .container .item{
+            /* width: 100px; */
+            height: 100px;
+            border: 2px solid blue;
+            font-size: 16px;
+            flex-grow: 1;
+            flex-basis: 0;
+
+            /* flex:1 1 0; */
+            flex : 1; /*3가지 모두 1로 설정*/
+        }
+
+        .contain{
+            height: 100px;
+            border: 2px solid red;
+            display: flex;
+            justify-content: space-between;
+        }
+        .logo{
+            width: 100px;
+            height: 100px;
+            background: gold;
+            /* float: left; */
+        }
+        .head{
+            width: 200px;
+            height: 100px;
+            background: darkblue;
+            /* float: right; */
+        }
+    </style>
+</head>
+<body>
+    <!-- flex -->
+    <!-- <div class="container clearfix">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+    </div>
+
+    <div class="container clearfix">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+    </div> -->
+
+    <!-- flex-wrap -->
+    <!-- <div class="container">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item order2">item3</div>
+    <div class="item">item4</div>
+    <div class="item order3">item5</div>
+    <div class="item">item6</div>
+    <div class="item">item7</div>
+    </div> -->
+
+    <!-- 4.justify-content -->
+    <!-- 위예제사용 -->
+
+    <!-- 5. aline-content 수직정렬 -->
+
+    <!-- 6. aline-item -->
+
+
+    <!-- 7. 아이템에 부여하는 속성값 -->
+
+    <!-- 8. flex-grow 증가 -->
+    <!-- flex-shrink 감소 -->
+    <!-- <div class="container">
+        <div class="item item1">item1</div>
+        <div class="item item2">item2</div>
+        <div class="item ">item3</div>
+    </div> -->
+
+    <!-- 축약표현 -->
+    <!-- <div class="container">
+        <div class="item">item11111</div>
+        <div class="item">2</div>
+        <div class="item ">item33333</div>
+    </div> -->
+
+    <div class="contain">
+        <div class="logo"></div>
+        <div class="head"></div>
+    </div>
+</body>
+</html>

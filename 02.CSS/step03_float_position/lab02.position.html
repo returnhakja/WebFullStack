@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        .parent{
+            width: 500px;
+            height: 400px;
+            border: 3px solid black;
+            position : relative;
+        }
+        .child{
+            width: 100px;
+            height: 100px;
+            background: red;
+            border: 3px dashed gray;
+            position: absolute; /*static은 변경불가능한 값이기에 안됌*/
+            top: 50px;
+            left: 50px;
+            /*absolute와 relative 차이점은 ?*/
+            /* relative(상대적) 배치 요소는 문서 흐름 속에 남아 있지만(즉, 상대적 관계 속에 존재한다), 절대 위치(absolute)에 있는 요소는 전체적 문서 흐름에서 제외된다
+             */
+
+             
+        }
+        /* relative */
+        .box{
+            width: 100px;
+            height: 100px;
+            background: red;
+            border: 3px dashed gray;
+        }
+        /*절대적인 값을 가진다고 생각할 수 있다. 주변박스의 영향을 주거나 받는 속성을 가지고 있다*/
+        .relative{ /*원래 자기 자신의 위치에서 움직인다*/
+            position: relative;
+            left: 300px;
+        }
+        /*absolute*/
+        .grand{
+            width: 600px;
+            height: 500px;
+            border: 3px solid blue;
+            padding: 20px;
+        }
+        .absolute {
+            position: absolute;
+            top: 50px;
+            left: 100px;
+        }
+        /*fixed*/
+        .fixed{
+            position: fixed;
+            top: 50px;
+            right: 50px;
+        }
+        body{
+            height: 2000px;
+        }
+        /*sticky*/
+        .container{
+            /* width: 400px;
+            height: 400px; */
+            border: 3px solid red;
+        }
+        .section {
+            height: 300px;
+            border: 3px solid black;
+        }
+        .section h1{
+            text-align: center;
+            top: 0;
+            position: sticky;
+        }
+        /* z-index */
+        .box{
+            width: 100px;
+            height: 100px;
+            background: red;
+            float: left;
+            margin-right: -20px;
+        }
+        .box:nth-child(2n){
+            margin-top: 20px;
+        }
+        .box2 {
+            position: relative;
+        }
+        .box3{
+            position: relative;
+            z-index: 3;
+        }
+        .box4{
+            position: relative;
+            z-index: 4;
+        }
+    </style>
+</head>
+<body>
+    <!-- position : 요소의 위치 지정 기준 설정 -->
+    <!-- static : 기준이 없는 값 / 배치불가능 값(기본값)-->
+    <!-- relative : 상대적인 값, 요소 자신 기준으로 위치 조정  -->
+    <!-- absolute : (위치상) 부모 요소 기준으로 위치 조정 -->
+    <!-- fixed : 브라우저를 기준으로 위치 조정 -->
+    <!-- sticky : 스크롤 영역 기준 (잘안쓰임) -->
+
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+
+    <!-- relative -->
+    <!-- <div class="box">1</div>
+    <div class="box relative">2</div> 
+     그래서 relative로 포지션을 잡는게 아니라 absolute로 잡는다 
+    <div class="box">3</div> -->
+<hr>
+
+    <!-- absolute -->
+    <!-- fixed -->
+    <div class="grand">
+        <div class="parent">
+            <div class="box">1</div>
+            <div class="box absolute">2</div>
+            <div class="box fixed">3</div>
+        </div>
+    </div>
+    <!-- 2번 박스에 absolute를 주면 3번박스는 2번 뒤로 이동하게된다 -->
+    <!-- 자기 자신의 위치가 부모요소 기준으로 위치하기 때문에 2번자리가 없는것으로 알기때문에 올라옴 -->
+<hr>
+    <!-- sticky -->
+    <div class="container">
+        <div class="section">
+            <h1>Title1</h1> </div>
+            <div class="section">
+            <h1>Title2</h1> </div>
+            <div class="section">
+            <h1>Title3</h1></div>
+            <div class="section">
+            <h1>Title4</h1></div>
+            <div class="section">
+            <h1>Title5</h1></div>
+            <div class="section">
+            <h1>Title6</h1> </div>
+        </div>
+    </div>
+    <!-- z-index -->
+    <div class="box">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+    <div class="box box4">box4</div>
+    <div class="box">box5</div>
+
+</body>
+</html>

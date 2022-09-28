@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        .box{
+            /* 첫번째실습 */
+            width: 100px;
+            height: 100px;
+            background: gold;
+            /* 두번째실습 */
+            margin: 20px;
+        }
+      
+    @keyframes change-width {
+        0%{
+            width: 100px;
+        }
+        10%{
+            background : red;
+        }
+        20%{
+            background : orange;
+        }
+        30%{
+            background : wheat;
+        }
+        50%{
+            height: 200px;
+        }
+        100%{
+            width: 300px;
+        }
+    }
+    .box:hover{
+        animation-name: change-width;
+        animation-duration: 3s;
+    }
+    /* 두번째 실습 */
+    .box1{
+        background: gold;
+    }
+    .box2{
+        background: green;
+    }
+    .box3{
+        background: red;
+    }
+    @keyframes up-size {
+        0%{
+            width: 100px;
+        }
+        100%{
+            width: 300px;
+        } 
+    }
+    .box1:hover{
+        animation-name: up-size;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+    }
+    .box2:hover{
+        animation-name: up-size;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-delay: 1s;
+    }
+    .box3:hover{
+        animation-name: up-size;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-delay: -1s;
+    }
+
+    /* 세번째실습 */
+    .boxx{
+            width: 100px;
+            height: 100px;
+            background: gold;
+            /* 두번째실습 */
+            margin: 20px;
+        }
+    .boxx.direction{
+        animation-name: move;
+        animation-duration: 2s;
+        animation-direction: normal;
+        animation-direction: reverse;
+        animation-direction: alternate;
+        /*iteration-count 와 함께 사용해줘야 반복적으로 움직임*/
+        animation-iteration-count: 2;
+    }
+    @keyframes move {
+        0%{
+            transform: translate(0,0);
+        }
+        25%{
+            transform: translate(50px,0)
+        }
+        50%{
+            transform: translate(50px,50px)
+        }
+        75%{
+            transform: translate(0,50px)
+        }
+        100%{
+            transform: translate(0,0)
+        }
+    }
+
+    /* 네번째 실습 fill-mode */
+    .boxxx{
+            width: 100px;
+            height: 100px;
+            background: gold;
+            margin: 20px;
+        }
+    .boxxx.fill-mode{
+        animation: fill-mode 2s 2s;
+        animation-fill-mode: forwards; /*기존위치에서 시작은 되나 이동한다음 마지막 끝맺음을 애니메이션 끝에서 종료*/
+        animation-fill-mode: backwards; /*애니메이션 시작위치*/
+        animation-fill-mode: both; /*둘다 가짐*/
+    }
+    @keyframes fill-mode {
+        0%{
+            transform: translate(200px, 0);
+        }
+        100%{
+            transform: translate(400px, 200px);
+        }
+    }
+
+    /* 다섯번째 실습 play-state */
+    .boxxxx{
+            width: 100px;
+            height: 100px;
+            background: gold;
+            margin: 20px;
+        }
+        
+    .boxxxx.play-state{
+        animation: up-size1 2s infinite alternate;
+    }
+    .boxxxx.play-state:hover{
+        animation-play-state: paused;
+    }
+    @keyframes up-size1 {
+        0%{
+            width: 100px;
+        }
+        100%{
+            width: 300px;
+        } 
+    }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <hr>
+    <!-- - animation-timing-function : 타이밍함수(ease) -->
+    <!-- - animation-delay : 대기 시간(0s) -->
+
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+<hr>
+    <!-- direction -->
+    <div class="boxx direction"></div>
+    <hr>
+    <!-- fill-mode -->
+    <div class="boxxx fill-mode">
+
+    <!-- play-state -->
+        <div class="boxxxx play-state"> </div>
+    </div>
+</body>
+</html>

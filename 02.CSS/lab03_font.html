@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fonts</title>
+    <style>
+        p {font-style: italic;
+            font-weight: bold;
+            font-size: 200;    
+        }
+        /* font-size */
+        div {font-size: large;
+        background-color: red;}
+        body * {
+            border: 2px solid;
+        }
+        .container {
+            /* width: 200px; */
+            font-size: 10px;
+            /* em은 자기 자신의 폰트크기를 기준 */
+            width: 20em;
+            background-color: blueviolet;
+        }
+        .parent{
+            /* width: 50%; */
+            width: 10em;
+            font-size: 10px;
+            background-color: aqua;
+        }
+        .child{
+            /* width: 50px; */
+            /* rem은 최상위 root의 폰트 크기를 기준으로 */
+            width: 5rem; /*현재 html폰트 기준으로 잡음*/
+            background-color: bisque;
+        }
+        html{
+            font-size: 10px;
+        }
+        .container2{
+            width:  50vw; /*현재 화면을 기준으로 얼마만큼 차지할것인지*/
+            height: 50vh;
+        }
+        
+        /* line-height */
+        .line{
+            background-color: crimson;
+            line-height: 2;  /*줄 간격*/
+        }
+        .color {
+            background-color: violet;
+            /* color: tomato; */
+            /* color:rgb(255, 0,0); */
+            color:#fff2ff
+        }
+        .family {
+            background-color: saddlebrown;
+            font-family: sans-serif, serif, monospace;
+        }
+        .align{
+            text-align: justify;
+        }
+        /* text decoration */
+        .deco {
+            background-color: aqua;
+            text-decoration: underline;
+        }
+        .indent{
+            text-indent: 20px;
+        }
+        .css{
+            text-indent: -9999px;
+        }
+    </style>
+</head>
+<body>
+    <!-- font-style -->
+    <p>font style 입니다.</p>
+    <p> 폰트 웨이트입니다.</p>
+    <!-- 단위 : px, cm, em, % -->
+    <!-- 기준 :16px -->
+    <!-- small, medium -->
+    <div> 폰트 사이즈 입니다.</div>
+    <!-- 단위디테일 -->
+    <div class="container"> 컨테이너
+        <div class="parent"> 부모
+            <div class="child">자식1</div>
+            <div class="child">자식2</div>
+        </div>
+    </div>
+    <!-- vw, vh -->
+    <div class="container2">
+    
+    </div>
+    <hr>
+    <!-- line-height -->
+    <div class="line">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia soluta nisi cumque voluptate corrupti quam saepe vitae doloribus impedit optio. Quod aliquid sint totam recusandae error? Expedita inventore debitis alias?</div>
+    <hr>
+    <div class="color">font color</div>
+
+    <!-- font-family -->
+    <!-- [글꼴 후보1,2,....], 글꼴 계열(꼭들어가야함) -->
+    <!-- serif : 바탕체
+    sans-serif : 고딕체
+    monospace : 가로폭 동등한 고정너비
+    cursive : 필기체
+    fantasy : 재미있는 글꼴 계열 -->
+    <div class="family">
+        Hello,CSS
+    </div>
+    <div class="align">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero libero rem, officiis, exercitationem repudiandae laborum ipsum odio mollitia consequuntur esse, similique est iure deleniti minus laboriosam perspiciatis explicabo deserunt iste?
+        Corporis consequatur veniam ratione, earum quos quaerat eum doloremque quis quae commodi ipsam vero rerum deserunt minima nisi, vel, consectetur itaque hic cum rem fugit deleniti delectus! Aspernatur, incidunt dolorum.
+        Iure, ab illo neque quos iste nihil placeat obcaecati enim adipisci accusamus eius eligendi delectus! Reprehenderit voluptatum dolor quaerat, beatae perferendis, sint et numquam ab molestiae iusto, aliquam saepe at!
+    </div>
+    <!-- text decoration -->
+    <div class="deco">hello css</div>
+    <!-- text-indent -->
+    <div class="indent">indent</div>
+    <div class="css">css</div>
+    <!-- <img src="https://cdn.class101.net/images/8c2d585d-1fb9-4000-a058-e3626c1946d0" alt="css"> -->
+
+</body>
+</html>
