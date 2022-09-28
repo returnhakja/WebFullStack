@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;steop06_Exception&apos; to &apos;step06_Exception&apos;&#x0D;&#x0A;- Original element: &apos;steop06_Exception&apos;&#x0D;&#x0A;- Renamed element: &apos;steop06_Exception&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;steop06_Exception&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=steop06_Exception" name="step06_Exception" references="true" stamp="1654829184021" version="1.0"/>
+</session>

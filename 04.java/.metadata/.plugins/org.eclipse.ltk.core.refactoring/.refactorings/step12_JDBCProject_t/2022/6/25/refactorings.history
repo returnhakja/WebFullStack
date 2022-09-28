@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;RunningSuccessView.java&apos; to &apos;step12_JDBCProject_t/src/blood.transfusion.view&apos;&#x0D;&#x0A;- Original project: &apos;step12_JDBCProject_t&apos;&#x0D;&#x0A;- Destination element: &apos;step12_JDBCProject_t/src/blood.transfusion.view&apos;&#x0D;&#x0A;- Original element: &apos;blood.transfusion.contoller.RunningSuccessView.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;blood.transfusion.view" element1="/src&lt;blood.transfusion.contoller{RunningSuccessView.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1655279271574" units="1" version="1.0"/>
+</session>
